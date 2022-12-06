@@ -3,32 +3,38 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'adding-pg',
+    loadChildren: () => import('./adding-pg/adding-pg.module').then( m => m.AddingPgPageModule)
+  },
+  {
+    path: 'listing-pg',
+    loadChildren: () => import('./listing-pg/listing-pg.module').then( m => m.ListingPgPageModule)
+  },
+  {
+    path: 'searching-pg',
+    loadChildren: () => import('./searching-pg/searching-pg.module').then( m => m.SearchingPgPageModule)
+  },
+  {
+    path: 'manipulate-db-pg',
+    loadChildren: () => import('./manipulate-db-pg/manipulate-db-pg.module').then( m => m.ManipulateDbPgPageModule)
+  },
+  {
+    path: 'help-pg',
+    loadChildren: () => import('./help-pg/help-pg.module').then( m => m.HelpPgPageModule)
+  },
+  {
+    path: 'avai-pg',
+    loadChildren: () => import('./avai-pg/avai-pg.module').then( m => m.AvaiPgPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'listing-page',
-    loadChildren: () => import('./listing-page/listing-page.module').then( m => m.ListingPagePageModule)
-  },
-  {
-    path: 'manipulate-page',
-    loadChildren: () => import('./manipulate-page/manipulate-page.module').then( m => m.ManipulatePagePageModule)
-  },
-  {
-    path: 'search-page',
-    loadChildren: () => import('./search-page/search-page.module').then( m => m.SearchPagePageModule)
+    loadChildren: () => import('./home-pg/home-pg.module').then(m => m.HomePgPageModule)
   }
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

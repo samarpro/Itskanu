@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-padding">
+    <ion-title>Add New Car</ion-title>
+    <ion-icon name="help" routerLink="/help-pg" class="ion-float-lg-right center" color="warning"></ion-icon>
+    <ion-label class="ion-float-lg-right center">Help</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (submit)="AddValue()">
+    <ion-item>
+      <ion-label position="floating">Registration Number</ion-label>
+      <ion-input type="number" ngModel number id="RegNum" name="RegNum"></ion-input>
+      <ion-note slot="helper">Enter a Registration Number</ion-note>
+      <ion-note slot="error">Invalid Registration</ion-note>
+    </ion-item>
+    <!-- ------ -->
+    <ion-item fill="solid">
+      <ion-label position="floating">Car Maker</ion-label>
+      <ion-input type="text" ngModel text id="carMaker" name="carMaker"></ion-input>
+      <ion-note slot="helper">Enter Car Manufacturer</ion-note>
+      <ion-note slot="error">Empty Text Field</ion-note>
+    </ion-item>
+    <!-- ---------------------------------------------------------- -->
+    <ion-item fill="solid">
+      <ion-label position="floating">Car Model</ion-label>
+      <ion-input type="text" ngModel text id="CarModel" name="CarModel"></ion-input>
+      <ion-note slot="helper">Enter a Model of Car</ion-note>
+      <ion-note slot="error">Invalid Model</ion-note>
+    </ion-item>
+    <!-- ---------------------------------------------------------- -->
+    <ion-item fill="solid">
+      <ion-label position="floating">Year</ion-label>
+      <ion-input type="text" ngModel text id="year" name="year"></ion-input>
+      <ion-note slot="helper">Enter Date</ion-note>
+      <ion-note slot="error">Invalid Date</ion-note>
+    </ion-item>
+    <!-- ----------------------------------------------------- -->
+    <ion-item fill="solid">
+      <ion-label position="floating">Odometer</ion-label>
+      <ion-input type="number" ngModel number id="Odometer" name="Odometer"></ion-input>
+      <ion-note slot="helper">Enter Distance Travelled</ion-note>
+      <ion-note slot="error">Invalid Distance</ion-note>
+    </ion-item>
+
+
+    <!-- RAdio Buttons -->
+    <br>
+    <ion-label for="transmission">Transmission type:</ion-label><br>
+    <ion-radio-group id="transmission" name="transmission" value="none">
+      <ion-item>
+        <ion-label>Manual</ion-label>
+        <ion-radio slot="start" value="manual"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Automatic</ion-label>
+        <ion-radio slot="start" value="automatic"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <br>
+
+    <ion-label for="body">Body type:</ion-label><br>
+    <ion-radio-group id="body" name="body" value="none">
+      <ion-item>
+        <ion-label>Hatch</ion-label>
+        <ion-radio slot="start" value="hatch"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sedan</ion-label>
+        <ion-radio slot="start" value="sedan"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>SUV</ion-label>
+        <ion-radio slot="start" value="suv"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Van</ion-label>
+        <ion-radio slot="start" value="van"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>UTE</ion-label>
+        <ion-radio slot="start" value="ute"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <br>
+
+
+    <ion-item fill="solid">
+      <ion-label position="floating">Rent Price</ion-label>
+      <ion-input type="number" ngModel number id="RentPrice" name="RentPrice"></ion-input>
+      <ion-note slot="helper">Enter Rent Price</ion-note>
+      <ion-note slot="error">Invalid Price</ion-note>
+    </ion-item>
+    <br>
+
+
+    <ion-label for="avaiable">Avaiable:</ion-label><br>
+    <ion-radio-group id="avaiable" name="avaiable" value="none">
+      <ion-item>
+        <ion-label>Yes</ion-label>
+        <ion-radio slot="start" value="Yes"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio slot="start" value="No"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <br><br>
+    <ion-button type="submit">Add</ion-button>
+  </form>
+</ion-content>

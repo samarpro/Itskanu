@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AddingPgPageModule } from './adding-pg/adding-pg.module';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+  
 }

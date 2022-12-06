@@ -3,22 +3,32 @@
 
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home" routerLink="/home">
+      <ion-tab-button tab="home" routerLink="">
         <ion-icon name="home"></ion-icon>
         <ion-label >Home</ion-label>
       </ion-tab-button>
+
+      <ion-tab-button tab="adding-pg" routerLink="/adding-pg">
+        <ion-icon name="add-outline"></ion-icon>
+        <ion-label>Add</ion-label>
+      </ion-tab-button>
   
-      <ion-tab-button tab="listingPage" routerLink="/listing-page">
+      <ion-tab-button tab="Avaiable" routerLink="/avai-pg">
+        <ion-icon name="Car"></ion-icon>
+        <ion-label>Avaiable</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="listingPage" routerLink="/listing-pg">
         <ion-icon name="list-outline"></ion-icon>
         <ion-label  >Database</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="editdb"routerLink="/manipulate-page" >
+      <ion-tab-button tab="editdb"routerLink="/manipulate-db-pg" >
         <ion-icon name="create-outline"></ion-icon>
         <ion-label >Edit</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="search" routerLink="/search-page">
+      <ion-tab-button tab="search" routerLink="/searching-pg">
         <ion-icon name="search"></ion-icon>
         <ion-label>Search</ion-label>
       </ion-tab-button>

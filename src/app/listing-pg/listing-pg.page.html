@@ -1,0 +1,15 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+      <ion-title>
+          <h1>All Cars</h1>
+      </ion-title>
+      <ion-icon name="help" routerLink="/help-pg" class="ion-float-lg-right center" color="warning"></ion-icon>
+    <ion-label class="ion-float-lg-right center" routerLink="/help-pg" >Help</ion-label>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" color="primary" >
+  <ion-button (click)="createTable()" color="warning">List all Cars</ion-button>
+  <!-- collapse group -->
+  <ion-accordion-group id="parent">
+  </ion-accordion-group>
+</ion-content>

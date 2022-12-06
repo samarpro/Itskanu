@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SearchingPg</ion-title>
+    <ion-icon name="help" routerLink="/help-pg" class="ion-float-lg-right center" color="warning"></ion-icon>
+    <ion-label class="ion-float-lg-right center" routerLink="/help-pg" >Help</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary" class="padding">
+  <ion-searchbar show-clear-button="always" clear-icon="trash-bin" placeholder="Search by Registration Number" id="searchBar" inputmode="numeric"></ion-searchbar>
+  <ion-button color="primary" (click)="SearchingFunc()">Search</ion-button>
+  <table id="table"></table>
+</ion-content>
